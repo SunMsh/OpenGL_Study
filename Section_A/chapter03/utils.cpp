@@ -31,11 +31,12 @@ GLuint CreateTexture2D(unsigned char* PixelData, int width, int height, GLenum T
 	glBindTexture(GL_TEXTURE_2D, Texture);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT/*GL_CLAMP*/);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT/*GL_CLAMP*/);
 	/* Copy the texture data into GPU */
 	glTexImage2D(GL_TEXTURE_2D, 0, Type, width, height, 0, Type, GL_UNSIGNED_BYTE, PixelData);
 	glBindTexture(GL_TEXTURE_2D, 0);
 	
 	return Texture;
 }
+

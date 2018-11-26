@@ -31,11 +31,11 @@ void Draw()
 	glColor4ub(255, 255, 255, 255);
 	glTexCoord2f(0.0f, 0.0f);
 	glVertex3f(-0.1f, -0.1f, -0.4f);
-	glTexCoord2f(1.0f, 0.0f);
+	glTexCoord2f(2.0f, 0.0f);
 	glVertex3f(0.1f, -0.1f, -0.4f);
-	glTexCoord2f(1.0f, 1.0f);
+	glTexCoord2f(2.0f, 2.0f);
 	glVertex3f(0.1f, 0.1f, -0.4f);
-	glTexCoord2f(0.0f, 1.0f);
+	glTexCoord2f(0.0f, 2.0f);
 	glVertex3f(-0.1f, 0.1f, -0.4f);
 	glEnd();
 }
